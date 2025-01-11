@@ -8,7 +8,7 @@ export const nowPlayingMovie = async () => {
 
 		const movie = data.results.map(MovieMapper.fromTheMovieDB)
 
-		console.log(JSON.stringify(movie, null, 2))
+		// console.log(JSON.stringify(movie, null, 2))
 
 		return movie
 	} catch (error) {

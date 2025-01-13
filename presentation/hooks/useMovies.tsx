@@ -16,5 +16,5 @@ export const useMovies = () => {
 		staleTime: 1000 * 60 * 60 * 24
 	})
 
-	return { nowPlayingQuery }
+	return { nowPlayingQuery, popularQuery }
 }

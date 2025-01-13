@@ -19,7 +19,9 @@ const MainSlideshow = ({ movies }: Props) => {
 		<View className="h-[250px] w-full">
 			<Carousel
 				data={movies}
-				renderItem={({ item }) => <Text>{item.title}</Text>}
+				renderItem={({ item }) =>
+					MoviesPoster({ id: item.id, poster: item.poster })
+				}
 				ref={ref}
 				width={200}
 				height={350}

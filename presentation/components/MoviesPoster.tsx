@@ -1,11 +1,32 @@
-import { View, Text } from 'react-native'
+import { View, Text, Pressable, Image } from 'react-native'
 import React from 'react'
+import { Movie } from '@/infrastructure/interfaces/movieDB.interface'
 
-const MoviesPoster = () => {
+interface Props {
+	id: number
+	poster: string
+	smallPoster?: boolean
+	className?: string
+}
+
+const MoviesPoster = ({
+	id,
+	poster,
+	smallPoster = false,
+	className
+}: Props) => {
 	return (
-		<View>
-			<Text>MoviesPoster</Text>
-		</View>
+		<Pressable className={`active:opacity-90 px-2 ${className}`}>
+			<Image
+				source={{ uri: poster }}
+				style={{
+					width: smallPoster ? 85 : 150,
+					height: smallPoster ? 130 : 250
+				}}
+				className="rounded-xl"
+				resizeMode="cover"
+			/>
+		</Pressable>
 	)
 }
 

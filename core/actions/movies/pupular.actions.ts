@@ -2,7 +2,7 @@ import { movieApi } from '@/core/api/movie-api'
 import { MovieDBMoviesResponse } from '@/infrastructure/interfaces/movieDB-response'
 import { MovieMapper } from '@/infrastructure/mappers/movie.mapper'
 
-export const pupularMovieActions = async () => {
+export const popularMovieActions = async () => {
 	try {
 		const { data } = await movieApi.get<MovieDBMoviesResponse>('/popular')
 

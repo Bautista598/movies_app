@@ -1,6 +1,6 @@
 import { nowPlayingMovie } from '@/core/actions/movies/now-playing.actions'
+import { popularMovieActions } from '@/core/actions/movies/pupular.actions'
 import { useQuery } from '@tanstack/react-query'
-import { populateParams } from 'expo-router/build/fork/getStateFromPath-forks'
 
 export const useMovies = () => {
 	//Queries

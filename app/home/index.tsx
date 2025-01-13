@@ -41,7 +41,10 @@ const HomeScreen = () => {
 				<Text className="text-3xl font-bold px-4 mt-4 mb-4">
 					Películas más valoradas
 				</Text>
-				<MovieHorizontalList movies={topRatedQuery.data?.pages.flat() ?? []} />
+				<MovieHorizontalList
+					movies={topRatedQuery.data?.pages.flat() ?? []}
+					loadNextPage={topRatedQuery.fetchNextPage}
+				/>
 
 				{/* Pelicular próximamente */}
 				<Text className="text-3xl font-bold px-4 mt-4 mb-4">

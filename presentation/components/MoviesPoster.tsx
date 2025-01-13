@@ -20,7 +20,7 @@ const MoviesPoster = ({
 			<Image
 				source={{ uri: poster }}
 				style={{
-					width: smallPoster ? 85 : 150,
+					width: smallPoster ? 80 : 160,
 					height: smallPoster ? 130 : 250
 				}}
 				className="rounded-xl"

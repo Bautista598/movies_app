@@ -7,3 +7,15 @@ export interface Movie {
 	poster: string
 	backdrop: string
 }
+
+export interface CompleteMovie extends Movie {
+	id: number
+	genres: string[]
+	duration: number
+	budget: number
+	originalTitle: string
+	productionCompanies: string[]
+	description: string
+	rating: number
+	poster: string
+}

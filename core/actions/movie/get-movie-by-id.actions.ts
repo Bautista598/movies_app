@@ -9,7 +9,7 @@ export const getMovieByAction = async (
 	try {
 		const { data } = await movieApi.get<MovieDBMoviesResponse>(`/${id}`)
 
-		console.log(data)
+		console.log('Película obtenida')
 
 		return MovieMapper.fromCompleteMovie(data)
 	} catch (error) {

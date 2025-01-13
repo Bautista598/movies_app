@@ -1,9 +1,23 @@
 export interface MovieDBMoviesResponse {
-	dates: Dates
-	page: number
-	results: Result[]
-	total_pages: number
-	total_results: number
+	id: number
+	title: string
+	original_title: string
+	overview: string
+	release_date: string
+	poster_path: string
+	backdrop_path: string
+	vote_average: number
+	runtime: number
+	genres: Genre[]
+	production_companies: ProductionCompany[] // Added production companies property
+	budget: number // Added budget property
+}
+
+export interface ProductionCompany {
+	id: number
+	logo_path: string | null
+	name: string
+	origin_country: string
 }
 
 export interface Dates {
@@ -26,6 +40,11 @@ export interface Result {
 	video: boolean
 	vote_average: number
 	vote_count: number
+}
+
+export interface Genre {
+	id: number
+	name: string
 }
 
 export enum OriginalLanguage {

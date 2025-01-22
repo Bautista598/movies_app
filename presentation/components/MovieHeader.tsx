@@ -1,4 +1,6 @@
 import { View, Image, Text, useWindowDimensions, Pressable } from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient'
+
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
 import { router } from 'expo-router'
@@ -14,7 +16,18 @@ const MoviesHeader = ({ originalTitle, title, poster }: Props) => {
 
 	return (
 		<>
-			<View className="absolute top-35 left-[35] z-[99] elevation-lg">
+			<LinearGradient
+				colors={['rgba(0,0,0,0.3)', 'transparent']}
+				start={[0, 0.5]}
+				style={{
+					height: screenHeight * 0.4,
+					position: 'absolute',
+					zIndex: 1,
+					width: '100%'
+				}}
+			/>
+
+			<View className="absolute top-35 left-[15] top-[15] z-[99] elevation-lg">
 				<Pressable onPress={() => router.dismiss()}>
 					<Ionicons
 						name="arrow-back"
